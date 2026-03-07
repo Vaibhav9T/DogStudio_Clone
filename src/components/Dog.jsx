@@ -34,16 +34,22 @@ function Dog() {
 
     const [
         normalMap,
-        sampleMapCap,
-        branchMap, 
-        branchNormalMap
-    ]= (useTexture(["/dog_normals.jpg","/matcap/mat-2.png", "/branches_diffuse.jpeg","/branches_normals.jpeg"])).map(
+        sampleMapCap
+    ]= (useTexture(["/dog_normals.jpg","/matcap/mat-2.png"])).map(
         texture=>{
         texture.flipY=false,
         texture.colorSpace=Three.SRGBColorSpace
         return texture
     }
     )
+
+    const [branchMap, 
+        branchNormalMap]=(
+            useTexture(["/branches_diffuse.jpeg","/branches_normals.jpeg"]).map(texture=>{
+                texture.colorSpace=Three.SRGBColorSpace
+                return texture
+            })
+        )
 
     const dogMaterial=new Three.MeshMatcapMaterial({
         normalMap: normalMap,
