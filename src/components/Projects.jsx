@@ -1,10 +1,12 @@
 import React from 'react'
-import './Projects.css'
+import  './Projects.css'
 
-function Projects({year, pTitle}) {
+
+function Projects({ className, year, pTitle, ...props}) {
+
   return (
     <div className='titles'>
-    <div className='title'>
+    <div className={`title ${className || ''}`} {...props}>
         <div className='year'>
         <small>{year}</small>
         </div>
