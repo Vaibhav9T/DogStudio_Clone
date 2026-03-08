@@ -38,7 +38,7 @@ section{
     background-image: url(/background-l.png);
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 0.3s linear;
+    transition: all 0.1s linear;
 }
 
 #sec-1{
