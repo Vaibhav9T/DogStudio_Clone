@@ -27,10 +27,25 @@ section{
    z-index: 2;
 }
 
+#canvas1::after{
+    content:"";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(/background-l.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s linear;
+}
+
 #sec-1{
 
     --gap:5rem;
     border: none;
+    position: relative;
 
     nav{
         display: flex;
@@ -101,8 +116,8 @@ section{
 
             p:nth-child(2){
                 padding-top: 2rem;
-                font-weight: 200;
-                font-size: 1rem;
+                font-weight: 400;
+                font-size: 0.95rem;
                 line-height: 1.5;
                 color: #7781a8;
             }
@@ -122,7 +137,7 @@ section{
 
              li+li::before{
                     content: "/";
-                    display: inline-block;
+                    display: inline;
                     margin-right: 10px;
                     margin-left: 10px;
                     vertical-align: middle;
@@ -140,4 +155,109 @@ section{
         }
 
     }
+
+    .firstline{
+        position: absolute;
+       background-color: #e23434;
+        width: 60rem;
+        height: 1px;
+        transform: rotate(45deg) translate(-40rem,-10rem);
+    }
+
+    .secline{
+         position: absolute;
+       background-color: #e23434;
+        width: 10rem;
+        height: 1px;
+        transform: rotate(-45deg) translate(81rem,21rem);
+    }
+
+}
+
+#sec-2{
+    border: none;
+    padding-top: 15rem;
+
+    
+
+    h6{
+        display: flex;
+        padding-bottom: 2rem;
+        opacity: 0.2;
+        letter-spacing: 0.2rem;
+        padding-left: 12rem;
+    }
+
+    .title:hover{
+        cursor: pointer;
+        opacity: 10;
+    }
+    
+}
+
+main:has(#sec-2 .title:hover) #canvas1:after{
+   
+    opacity: 0;
+
+}
+
+.images{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+         transition: all 0.3s linear;
+    }
+}
+
+
+main:has(#sec-2 .title[itl="tommorowland"]:hover) .images #tommorowland{
+    opacity: 1;
+    background-color: #020d26;
+}
+
+main:has( #sec-2 .title[itl="navy"]:hover) .images #navy
+{
+    opacity: 1;
+    background-color: #060d2e;
+}
+
+main:has( #sec-2 .title[itl="msi"]:hover) .images #msi
+{
+      opacity: 1;
+    background-color: #041539;
+}
+
+
+main:has( #sec-2 .title[itl="phone"]:hover) .images #phone{
+    opacity: 1;
+    background-color: #0d1e33;
+
+}
+
+main:has( #sec-2 .title[itl="kikk"]:hover) .images #kikk{
+    opacity: 1;
+    background-color: #041681 ;
+
+}
+main:has( #sec-2 .title[itl="kennedy"]:hover) .images #kennedy{
+    opacity: 1;
+    background-color: #0e2a37;
+
+}
+
+main:has( #sec-2 .title[itl="opera"]:hover) .images #opera{
+    opacity: 1;
+    background-color:#740705 ;
+
 }

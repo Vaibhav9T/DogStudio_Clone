@@ -4,20 +4,30 @@ import React from 'react'
 import Dog from './components/Dog'
 import { Canvas  } from "@react-three/fiber";
 import { cover } from 'three/src/extras/TextureUtils.js';
+import Projects from './components/Projects'
 
 function App() {
   return (
     <main>
-    <Canvas style={{
+      <div className="images">
+        <img id="tommorowland" src="/tommorowland.png" alt="" />
+        <img id='navy' src="/navy-pier.png" alt="" />
+        <img id='msi' src="msi-chicago.png" alt="" />
+        <img id="phone" src="/phone.png" alt="" />
+        <img id='kikk' src="kikk.png" alt="" />
+        <img id='kennedy' src="kennedy.png" alt="" />
+        <img id='opera' src="/opera.png" alt="" />
+      </div>
+
+    <Canvas 
+    id='canvas1'
+    style={{
         height:"100vh",
         width:"100vw",
         position:'fixed',
         top:0,
         left:0,
-         zIndex:1,
-         backgroundImage:"url(/background-l.png)",
-         backgroundRepeat:'no-repeat',
-         backgroundSize:"cover"
+         zIndex:1
     }}> 
         <Dog />
     </Canvas>
@@ -87,8 +97,21 @@ function App() {
         </ul>
         </div>
       </div>
+
+      <div className="firstline"></div>
+      <div className="secline"></div>
     </section>
-    <section id='sec-2'></section>
+
+    <section id='sec-2'>
+        <h6>FEATURED PROJECTS</h6>
+        <Projects  itl="tommorowland" className="title" year='2020-ONGOING' pTitle='Tomorrowland' />
+        <Projects itl="navy"  className="title"  year='2018-TODAY'  pTitle='Navy Pier' />
+        <Projects itl="msi" className="title"  year='2015-TODAY'  pTitle='MSI Chicago' />
+        <Projects itl="phone"  className="title"  year='2016' pTitle="This Was Louise's Phone" />
+        <Projects itl="kikk" className="title" year='2012-TODAY' pTitle="KIKK Festival 2018" />
+        <Projects itl="kennedy" className="title" year='2017' pTitle='The Kennedy Center' />
+        <Projects itl="opera"  className="title" year='2016-ONGOING'  pTitle='Royal Opera Of Wallonia' />
+    </section>
     <section id='sec-3'></section>
     </main>
    
