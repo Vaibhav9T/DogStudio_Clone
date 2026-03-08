@@ -4,6 +4,7 @@ import React from 'react'
 import Dog from './components/Dog'
 import { Canvas  } from "@react-three/fiber";
 import { cover } from 'three/src/extras/TextureUtils.js';
+import Projects from './components/Projects'
 
 function App() {
   return (
@@ -87,8 +88,24 @@ function App() {
         </ul>
         </div>
       </div>
+
+      <div className="firstline"></div>
+      <div className="secline"></div>
     </section>
-    <section id='sec-2'></section>
+
+    <section id='sec-2'>
+      
+         <h6>FEATURED PROJECTS</h6>
+
+        <Projects year='2020-ONGOING' pTitle='Tomorrowland' />
+        <Projects year='2018-TODAY'  pTitle='Navy Pier' />
+        <Projects year='2015-TODAY'  pTitle='MSI Chicago' />
+        <Projects year='2016' pTitle="This Was Louise's Phone" />
+        <Projects year='2012-TODAY' pTitle="KIKK Festival 2018" />
+        <Projects year='2017' pTitle='The Kennedy Center' />
+        <Projects year='2016-ONGOING'  pTitle='Royal Opera Of Wallonia' />
+
+    </section>
     <section id='sec-3'></section>
     </main>
    

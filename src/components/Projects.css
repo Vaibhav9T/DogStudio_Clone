@@ -1,0 +1,35 @@
+.titles{
+    display: flex;
+    flex-direction: column;
+   
+
+.title{
+    display: flex;
+    gap: 4rem;
+    padding-block: 1rem;
+
+    h1{
+        font-size: 5rem;
+        font-weight: 20;
+        opacity: 0.2;
+        line-height: 1;
+    }
+
+    small{
+        opacity: 0.2;
+        margin-top: 1rem;
+        letter-spacing: 0.01rem;
+    }
+
+    .year{
+        display: flex;
+        width: 8%;
+        justify-content: right;
+    }
+
+    .p{
+        justify-content: right;
+        padding-left: 1rem;
+    }
+}
+}
