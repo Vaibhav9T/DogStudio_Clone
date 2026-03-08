@@ -110,7 +110,7 @@ function Dog() {
     
   return (
         <>
-        <primitive object={model.scene} position={[0.19,-0.61,0]} rotation={[0,Math.PI/5, 0]}/>
+        <primitive object={model.scene} position={[0.18,-0.61,0]} rotation={[0,Math.PI/5, 0]}/>
         <directionalLight color={0xFFFFFF} intensity={10} position={[0,0,5]}/>
         </>
   )

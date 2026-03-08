@@ -61,6 +61,30 @@ function App() {
           <p>Dogstudio is a multidisciplinary <br />
           creative studio at the intersection <br />
           of art, design and technology.</p>
+          
+          <p>
+            Our goal is to deliver amazing experiences that make <br />
+            people talk, and build strategic value for brands, tech, <br />
+            entertainment, arts & culture.
+          </p>
+
+        <ul>
+          
+          <li><a href="www.facebook.com">Facebook</a></li>
+          <li>
+            <a href="www.instagram.com">Instagarm</a>
+          </li>
+          <li>
+            
+            <a href="www.">Dribbble</a>
+          </li>
+          <li>
+            <a href="www.twitter.com">Twitter</a>
+          </li>
+          <li>
+            <a href="www.dogstudio.co">Newsletter</a>
+          </li>
+        </ul>
         </div>
       </div>
     </section>
