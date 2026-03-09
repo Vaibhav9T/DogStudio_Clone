@@ -112,7 +112,48 @@ function App() {
         <Projects itl="kennedy" className="title" year='2017' pTitle='The Kennedy Center' />
         <Projects itl="opera"  className="title" year='2016-ONGOING'  pTitle='Royal Opera Of Wallonia' />
     </section>
-    <section id='sec-3'></section>
+    <section id='sec-3'>
+      <div className="top">
+        <div className="left">
+          <h6>THIS IS HOW WE DO IT</h6>
+          <h3>
+            We're crafting <br />
+            emotional <br /> 
+            experiences aimed <br />
+             at improving <br /> 
+             results
+          </h3>
+        </div>
+        <div className="right"></div>
+      </div>
+    </section>
+
+    <section id="sec-4">
+      <div className="bottom">
+        <div className="left"></div>
+        <div className="right">
+          <p>Dogstudio is a design & <br /> 
+          technology firm working globally <br />
+           from our offices based <br />
+           in Belgium and Chicago. <br />
+            Our strong focus on producing <br />
+            high quality & emotional <br />
+            brandings, digital products and <br />
+            experiences became a signature.
+            </p>
+
+            <p>
+              We’re passionate about moving <br />
+              people and solving problems for <br />
+              the likes of Microsoft, The <br />
+              Museum of Science And Industry <br />
+              Of Chicago, The Kennedy Center <br />
+              of Washington, Dragone, Quanta <br />
+               Magazine, and many more.
+            </p>
+        </div>
+      </div>
+    </section>
     </main>
    
   )
