@@ -42,7 +42,7 @@ function Dog() {
         normalMap
     ]= (useTexture(["/dog_normals.jpg"])).map(
         texture=>{
-        texture.flipY=false,
+        texture.flipY=true,
         texture.colorSpace=Three.SRGBColorSpace
         return texture
     }
@@ -109,6 +109,12 @@ function Dog() {
             uProgress:{value:1.0}
         })
 
+        const bMaterial = useRef({
+            uMatcap1:{value : mat19},
+            uMatcap2:{value: branchMap},
+            uProgress : {value : 1.0}
+        })
+        
     const dogMaterial=new Three.MeshMatcapMaterial({
         normalMap: normalMap,
         matcap: mat2
@@ -154,6 +160,7 @@ function Dog() {
 
     dogMaterial.onBeforeCompile=onBeforeCompile
 
+
     model.scene.traverse((child)=>{
         if(child.name.includes("DOG")) {
            child.material=dogMaterial
@@ -196,7 +203,7 @@ function Dog() {
 
     useEffect(()=>{
         document.querySelector(`.title[itl="tommorowland"]`).addEventListener("mouseenter",()=>{
-             material.current.uMatcap1.value=mat19
+            material.current.uMatcap1.value=mat19
             gsap.to(material.current.uProgress,{
                 value:0.0,
                 duration: 1,

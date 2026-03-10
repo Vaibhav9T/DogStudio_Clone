@@ -153,6 +153,9 @@ function App() {
             </p>
         </div>
       </div>
+
+      <div className="firstline"></div>
+      <div className="secline"></div>
     </section>
     </main>
    
