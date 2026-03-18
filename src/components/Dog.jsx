@@ -14,6 +14,7 @@ function Dog() {
     gsap.registerPlugin(ScrollTrigger)
     gsap.registerPlugin(useGSAP)
 
+    //Loading Scene and camera
     const model = useGLTF("./models/dog.drc.glb")
     useThree(({camera, scene, gl})=>(
         camera.position.z=0.4,
@@ -38,6 +39,7 @@ function Dog() {
     textures.colorSpace=Three.SRGBColorSpace    
     */
 
+    //Textures for dog model
     const [
         normalMap
     ]= (useTexture(["/dog_normals.jpg"])).map(
@@ -48,6 +50,7 @@ function Dog() {
     }
     )
 
+    //Textures for branch
     const [branchMap, 
         branchNormalMap]=(
             useTexture(["/branches_diffuse.jpeg","/branches_normals.jpeg"]).map(texture=>{
@@ -299,6 +302,28 @@ function Dog() {
         })
     },[])
 
+
+    useEffect(() => {
+    const baseX = 0
+    const baseY = Math.PI / 5 // matches your initial primitive Y rotation
+    const maxTilt = 0.08      // about 4.5 degrees (minor effect)
+
+    const onMove = (e) => {
+        const nx = (e.clientX / window.innerWidth - 0.5) * 2   // -1 to 1
+        const ny = (e.clientY / window.innerHeight - 0.5) * 2  // -1 to 1
+
+        gsap.to(dogmodel.current.scene.rotation, {
+        y: baseY + nx * maxTilt, // left/right
+        x: baseX + ny * maxTilt, // up/down
+        duration: 0.35,
+        ease: "power2.out",
+        overwrite: "auto"
+        })
+    }
+
+    window.addEventListener("mousemove", onMove)
+    return () => window.removeEventListener("mousemove", onMove)
+    }, [])
     
   return (
         <>
