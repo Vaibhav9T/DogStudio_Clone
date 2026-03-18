@@ -303,14 +303,14 @@ function Dog() {
     },[])
 
 
-    useEffect(() => {
+    {/*useEffect(() => {
     const baseX = 0
     const baseY = Math.PI / 5 // matches your initial primitive Y rotation
     const maxTilt = 0.08      // about 4.5 degrees (minor effect)
 
     const onMove = (e) => {
-        const nx = (e.clientX / window.innerWidth - 0.5) * 2   // -1 to 1
-        const ny = (e.clientY / window.innerHeight - 0.5) * 2  // -1 to 1
+        const nx = (e.clientX / window.innerWidth - 0.5)    // -1 to 1
+        const ny = (e.clientY / window.innerHeight - 0.5)  // -1 to 1
 
         gsap.to(dogmodel.current.scene.rotation, {
         y: baseY + nx * maxTilt, // left/right
@@ -323,11 +323,11 @@ function Dog() {
 
     window.addEventListener("mousemove", onMove)
     return () => window.removeEventListener("mousemove", onMove)
-    }, [])
+    }, [])*/}
     
   return (
         <>
-        <primitive object={model.scene} position={[0.18,-0.63,0]} rotation={[0,Math.PI/5, 0]}/>
+        <primitive object={model.scene} position={[0.18,-0.63,0]} rotation={[-0.09,Math.PI/5.5, 0]}/>
         <directionalLight color={0xFFFFFF} intensity={10} position={[0,0,5]}/>
         </>
   )
