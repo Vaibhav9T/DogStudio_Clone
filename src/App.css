@@ -355,4 +355,20 @@ main:has( #sec-2 .title[itl="opera"]:hover) .images #opera{
         };
     }
 
+    .firstline{
+        position: absolute;
+       background-color: #e23434;
+        width: 10rem;
+        height: 1px;
+        transform: rotate(45deg) translate(10rem,-10rem);
+    }
+
+    .secline{
+         position: absolute;
+       background-color: #e23434;
+        width: 60rem;
+        height: 1px;
+        transform: rotate(-45deg) translate(70rem,20rem);
+    }
+
 }

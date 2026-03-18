@@ -6,9 +6,12 @@ import { Canvas  } from "@react-three/fiber";
 import { cover } from 'three/src/extras/TextureUtils.js';
 import Projects from './components/Projects'
 
+
 function App() {
+
+
   return (
-    <main>
+    <main className="ma">
       <div className="images">
         <img id="tommorowland" src="/tommorowland.png" alt="" />
         <img id='navy' src="/navy-pier.png" alt="" />
@@ -153,6 +156,9 @@ function App() {
             </p>
         </div>
       </div>
+
+      <div className="firstline"></div>
+      <div className="secline"></div>
     </section>
     </main>
    
